@@ -3,11 +3,24 @@ import uvicorn
 import numpy as np
 from io import BytesIO
 from PIL import Image
-import tensorflow as tf
 import os
 import requests
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:3000",
+    "https://localhost"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 endpoint = "http://localhost:8501/v1/models/potatoes_model:predict"
 
@@ -31,13 +44,16 @@ async def predict(
 ):
     img = read_image(await file.read())
     img_batch = np.expand_dims(img, axis=0)
+
     json_data = {
         "instances": img_batch.tolist()
     }
     response = requests.post(endpoint, json=json_data)
+
     prediction = response.json()["predictions"][0]
     predicted_class = CLASS_NAMES[np.argmax(prediction)]
     confidence = float(np.max(prediction))
+
     return {
         "class": predicted_class,
         "confidence": float(confidence)
