@@ -14,8 +14,10 @@ import { DropzoneArea } from 'material-ui-dropzone';
 import Clear from '@material-ui/icons/Clear';
 import { useStyles } from "./useStyles";
 import axios from "axios";
+import UnstyledTabsCustomized from "../custumizedTabs/customizedTabs";
 
 /* TODO
+ Use multiple tabs for the other models
  Add notification on image add and on image clear
  Add notification when prediction ends
  Create an account on AWS or Google Cloud to upload the tf model
