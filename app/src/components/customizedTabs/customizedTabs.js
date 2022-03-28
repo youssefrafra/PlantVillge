@@ -1,10 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import TabsUnstyled from '@mui/base/TabsUnstyled';
-import {Tab, TabPanel, TabsList, } from "tabStyles";
-import { ImageUpload } from '../imageUpload/imageUpload';
+import {Tab, TabPanel, TabsList, } from "./tabStyles";
 
 
-export default function UnstyledTabsCustomized(props) {
+export const UnstyledTabsCustomized = (props) => {
   return (
     <TabsUnstyled defaultValue={0}>
       <TabsList>

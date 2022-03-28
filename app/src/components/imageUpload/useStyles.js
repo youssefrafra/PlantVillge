@@ -1,10 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
-import image from "../farmbg.jpg";
 
 export const useStyles = makeStyles((theme) => ({
-    grow: {
-        flexGrow: 1,
-    },
     clearButton: {
         width: "-webkit-fill-available",
         position: "absolute",
@@ -27,18 +23,6 @@ export const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         margin: 'auto',
         maxWidth: 500,
-    },
-    gridContainer: {
-        justifyContent: "center",
-        padding: "4em 1em 0 1em",
-    },
-    mainContainer: {
-        backgroundImage: `url(${image})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        height: "92vh",
-        marginTop: "8px",
     },
     imageCard: {
         margin: "auto",
@@ -110,11 +94,6 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         flexDirection: 'column',
         alignItems: 'center',
-    },
-    appbar: {
-        background: '#33cc33',
-        boxShadow: 'none',
-        color: 'white'
     },
     loader: {
         color: '#3399ff !important',
