@@ -62,9 +62,9 @@ const blue = {
   
   export const TabsList = styled(TabsListUnstyled)`
     min-width: 320px;
-    background-color: ${blue[500]};
-    border-radius: 8px;
-    margin-bottom: 16px;
+    background-color: #178a13;
+    // border-radius: 8px;
+    // margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: center;

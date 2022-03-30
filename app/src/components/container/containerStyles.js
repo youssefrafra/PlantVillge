@@ -20,7 +20,7 @@ export const useStyles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
-        height: "92vh",
+        height: "93vh",
         marginTop: "8px",
     },
 }));
